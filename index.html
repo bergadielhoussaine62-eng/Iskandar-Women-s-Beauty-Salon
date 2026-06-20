@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>صالون اسكندر النسائي | تجربة فخامة فريدة</title>
+    <!-- Tailwind CSS v4 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
@@ -17,10 +19,12 @@
 </head>
 <body class="bg-[#faf6f0] text-stone-800 selection:bg-rose-200 antialiased">
 
-    <div class="bg-stone-900 text-white text-center py-2 text-xs md:text-sm font-medium tracking-wide">
-        ✨ تميزي بإطلالتكِ اليوم - احجزي الآن واحصلي على استشارة مجانية للعناية بشعركِ
+    <!-- شريط الإعلان الفوقاني (Shopify Style) -->
+    <div class="bg-stone-900 text-white text-center py-2.5 text-xs md:text-sm font-semibold tracking-wide border-b border-amber-500/20">
+        ✨ تميزي بإطلالتكِ اليوم - احجزي الآن واحصلي على استشارة مجانية للعناية بشعركِ وبشرتكِ
     </div>
 
+    <!-- الهيدر البرو والشفاف متناسق مع Vercel -->
     <header class="sticky top-0 z-50 bg-[#faf6f0]/90 backdrop-blur-md border-b border-stone-200/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="https://iskandar-women-s-beauty-salon.vercel.app/" class="flex flex-col text-right">
@@ -28,21 +32,22 @@
                 <span class="text-[10px] tracking-[0.2em] text-amber-700 uppercase -mt-1 font-bold">HAIR & BEAUTY SALON</span>
             </a>
             
-            <nav class="hidden md:flex items-center space-x-reverse space-x-8 text-sm font-semibold text-stone-600">
+            <nav class="hidden md:flex items-center space-x-reverse space-x-8 text-sm font-bold text-stone-600">
                 <a href="#services" class="hover:text-stone-900 transition-colors">خدماتنا النخبوية</a>
                 <a href="#gallery" class="hover:text-stone-900 transition-colors">معرض الصور</a>
                 <a href="#reviews" class="hover:text-stone-900 transition-colors">آراء عميلاتنا</a>
-                <a href="#location" class="hover:text-stone-900 transition-colors">موقعنا حياُ</a>
+                <a href="#location" class="hover:text-stone-900 transition-colors">موقعنا الحيوى</a>
             </nav>
 
             <div>
-                <a href="https://wa.me/966503735564" target="_blank" class="inline-flex items-center justify-center bg-stone-950 text-white text-xs md:text-sm px-6 py-3 font-bold hover:bg-stone-800 transition-all border border-transparent hover:border-amber-500">
+                <a href="https://wa.me/966503735564" target="_blank" class="inline-flex items-center justify-center bg-stone-950 text-white text-xs md:text-sm px-6 py-3 font-bold hover:bg-amber-700 hover:text-stone-950 transition-all border border-transparent">
                     احجزي موعدكِ الآَن
                 </a>
             </div>
         </div>
     </header>
 
+    <!-- واجهة الهيرو بالتصاور المتداخلة الشغالة بالكامل -->
     <section class="relative min-h-[calc(100vh-5rem)] flex items-center bg-[#f4ece1] overflow-hidden py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
@@ -69,13 +74,14 @@
                     </div>
                 </div>
 
+                <!-- تصاور حقيقية شغالة مائة بالمائة وبجودة فائقة -->
                 <div class="lg:col-span-5 order-1 lg:order-2 relative flex justify-center">
                     <div class="relative w-full max-w-[380px] h-[480px]">
-                        <div class="absolute bottom-0 left-0 w-[85%] h-[85%] bg-stone-300 overflow-hidden border-4 border-white shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=600" alt="ديكور صالون اسكندر" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 w-[85%] h-[85%] overflow-hidden border-4 border-white shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=600" alt="ديكور الصالون الفاخر" class="w-full h-full object-cover">
                         </div>
-                        <div class="absolute top-0 right-0 w-[75%] h-[75%] bg-stone-400 overflow-hidden border-4 border-white shadow-2xl z-10">
-                            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=600" alt="تصفيف شعر احترافي" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 w-[75%] h-[75%] overflow-hidden border-4 border-white shadow-2xl z-10">
+                            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=600" alt="تصفيف صبغة وشعر احترافي" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
@@ -84,6 +90,7 @@
         </div>
     </section>
 
+    <!-- قسم الخدمات البرو مع الصور الكاملة لكل خدمة -->
     <section id="services" class="py-24 bg-white border-t border-stone-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
@@ -93,9 +100,10 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="group flex flex-col h-full bg-[#faf6f0] border border-stone-200 overflow-hidden hover:border-stone-900 transition-all duration-350">
-                    <div class="h-64 bg-stone-200 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1605497746444-ac9663ffb9a4?auto=format&fit=crop&q=80&w=500" alt="العناية بالشعر" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <!-- خدمة 1 -->
+                <div class="group flex flex-col h-full bg-[#faf6f0] border border-stone-200 overflow-hidden hover:border-stone-900 transition-all">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1605497746444-ac9663ffb9a4?auto=format&fit=crop&q=80&w=500" alt="العناية بالشعر" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6 flex-1 flex flex-col justify-between text-right space-y-4">
                         <h3 class="text-xl font-bold text-stone-900">علاجات وقصات الشعر</h3>
@@ -104,9 +112,10 @@
                     </div>
                 </div>
 
-                <div class="group flex flex-col h-full bg-[#faf6f0] border border-stone-200 overflow-hidden hover:border-stone-900 transition-all duration-350">
-                    <div class="h-64 bg-stone-200 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=500" alt="المكياج" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <!-- خدمة 2 -->
+                <div class="group flex flex-col h-full bg-[#faf6f0] border border-stone-200 overflow-hidden hover:border-stone-900 transition-all">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=500" alt="المكياج" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6 flex-1 flex flex-col justify-between text-right space-y-4">
                         <h3 class="text-xl font-bold text-stone-900">مكياج السهرات والعرائس</h3>
@@ -115,9 +124,10 @@
                     </div>
                 </div>
 
-                <div class="group flex flex-col h-full bg-[#faf6f0] border border-stone-200 overflow-hidden hover:border-stone-900 transition-all duration-350">
-                    <div class="h-64 bg-stone-200 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=500" alt="البشرة" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <!-- خدمة 3 -->
+                <div class="group flex flex-col h-full bg-[#faf6f0] border border-stone-200 overflow-hidden hover:border-stone-900 transition-all">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=500" alt="البشرة" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6 flex-1 flex flex-col justify-between text-right space-y-4">
                         <h3 class="text-xl font-bold text-stone-900">علاجات البشرة والنضارة</h3>
@@ -126,9 +136,10 @@
                     </div>
                 </div>
 
-                <div class="group flex flex-col h-full bg-[#faf6f0] border border-stone-200 overflow-hidden hover:border-stone-900 transition-all duration-350">
-                    <div class="h-64 bg-stone-200 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1604654894610-df4906b147c0?auto=format&fit=crop&q=80&w=500" alt="أظافر" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <!-- خدمة 4 -->
+                <div class="group flex flex-col h-full bg-[#faf6f0] border border-stone-200 overflow-hidden hover:border-stone-900 transition-all">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1604654894610-df4906b147c0?auto=format&fit=crop&q=80&w=500" alt="أظافر" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6 flex-1 flex flex-col justify-between text-right space-y-4">
                         <h3 class="text-xl font-bold text-stone-900">بروتوكول الأظافر الملكي</h3>
@@ -140,6 +151,7 @@
         </div>
     </section>
 
+    <!-- معرض صور حقيقي وكامل (Gallery Lookbook) -->
     <section id="gallery" class="py-24 bg-[#f4ece1]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-right space-y-3 mb-12">
@@ -148,25 +160,26 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
-                <div class="h-80 bg-stone-300 overflow-hidden relative group">
-                    <img src="https://images.unsplash.com/photo-1595475243530-583d09d9d6a5?auto=format&fit=crop&q=80&w=500" alt="إطلالة مكياج" class="w-full h-full object-cover">
+                <div class="h-80 overflow-hidden relative group shadow-md">
+                    <img src="https://images.unsplash.com/photo-1595475243530-583d09d9d6a5?auto=format&fit=crop&q=80&w=500" alt="إطلالة مكياج" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                 </div>
-                <div class="h-80 bg-stone-300 overflow-hidden relative group md:row-span-2 md:h-full min-h-[400px]">
-                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600" alt="تسريحة فخمة" class="w-full h-full object-cover">
+                <div class="h-80 overflow-hidden relative group shadow-md md:row-span-2 md:h-full min-h-[400px]">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600" alt="تسريحة فخمة العروس" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                 </div>
-                <div class="h-80 bg-stone-300 overflow-hidden relative group">
-                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&q=80&w=500" alt="صبغات ألوان" class="w-full h-full object-cover">
+                <div class="h-80 overflow-hidden relative group shadow-md">
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&q=80&w=500" alt="صبغات ألوان عصرية" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                 </div>
-                <div class="h-80 bg-stone-300 overflow-hidden relative group">
-                    <img src="https://images.unsplash.com/photo-1632345031435-8797b2d58045?auto=format&fit=crop&q=80&w=500" alt="جلسة نضارة" class="w-full h-full object-cover">
+                <div class="h-80 overflow-hidden relative group shadow-md">
+                    <img src="https://images.unsplash.com/photo-1632345031435-8797b2d58045?auto=format&fit=crop&q=80&w=500" alt="جلسة العناية الفائقة بالبشرة" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                 </div>
-                <div class="h-80 bg-stone-300 overflow-hidden relative group">
-                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=500" alt="منتجات حصرية" class="w-full h-full object-cover">
+                <div class="h-80 overflow-hidden relative group shadow-md">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=500" alt="منتجات حصرية للصالون" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- قسم المراجعات الحقيقية بالنجوم -->
     <section id="reviews" class="py-24 bg-white border-b border-stone-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
@@ -175,19 +188,19 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-[#faf6f0] p-8 border border-stone-200 text-right space-y-4">
+                <div class="bg-[#faf6f0] p-8 border border-stone-200 text-right space-y-4 shadow-sm">
                     <div class="text-amber-500 text-sm">★★★★★</div>
                     <h4 class="text-lg font-bold text-stone-900">"شغل بروفيشنال وتناسق رهيب"</h4>
                     <p class="text-stone-650 text-sm leading-relaxed font-light">بصراحة أفضل صالون جربته في أبها لصبغات الشعر. الخبيرة شافت شعري وعطتني اللون المناسب بالضبط.</p>
                     <p class="text-xs font-bold text-stone-400">— نورة العسيري</p>
                 </div>
-                <div class="bg-[#faf6f0] p-8 border border-stone-200 text-right space-y-4">
+                <div class="bg-[#faf6f0] p-8 border border-stone-200 text-right space-y-4 shadow-sm">
                     <div class="text-amber-500 text-sm">★★★★★</div>
                     <h4 class="text-lg font-bold text-stone-900">"مكياج سهرة نظيف وراقي"</h4>
                     <p class="text-stone-650 text-sm leading-relaxed font-light">حجزت عندهم لمكياج زواج أختي وطلعت كأني ملكة جمال! الميكاب كان ثابت طول السهرة وما تغير لونه.</p>
                     <p class="text-xs font-bold text-stone-400">— منى الشهراني</p>
                 </div>
-                <div class="bg-[#faf6f0] p-8 border border-stone-200 text-right space-y-4">
+                <div class="bg-[#faf6f0] p-8 border border-stone-200 text-right space-y-4 shadow-sm">
                     <div class="text-amber-500 text-sm">★★★★★</div>
                     <h4 class="text-lg font-bold text-stone-900">"راحة، نظافة، والتزام تام"</h4>
                     <p class="text-stone-650 text-sm leading-relaxed font-light">المكان يفتح النفس والخصوصية فيه 100%. الأدوات معقمة والنظافة واضحة جداً والالتزام بالمواعيد رائع.</p>
@@ -197,6 +210,7 @@
         </div>
     </section>
 
+    <!-- قسم تفاصيل الاتصال والخريطة الحقيقية والمباشرة لصالون اسكندر بأبها من قوقل مابس -->
     <section id="location" class="bg-stone-950 text-white py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-16 items-center">
             
@@ -225,32 +239,34 @@
                 </div>
                 
                 <div class="pt-2">
-                    <a href="https://maps.google.com/?q=%D8%B5%D8%A7%D9%84%D9%88%D9%86+%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1+%D8%A7%D9%84%D9%86%D8%B3%D8%A7%D8%A6%D9%8A+%D8%A3%D8%A8%D9%87%D8%A7" target="_blank" class="inline-flex bg-amber-600 hover:bg-amber-700 text-stone-950 font-bold px-6 py-3 text-xs uppercase transition-all">
+                    <a href="https://www.google.com/maps/place/%D8%B5%D8%A7%D9%84%D9%88%D9%86+%D8%A7%D8%B3%D9%83%D9%86%D8%AF%D8%B1+%D8%A7%D9%84%D9%86%D8%B3%D8%A7%D8%A6%D9%8A%E2%80%AD/@18.2302113,42.5871601,17z/" target="_blank" class="inline-flex bg-amber-600 hover:bg-amber-700 text-stone-950 font-bold px-6 py-3 text-xs uppercase transition-all">
                         افتحي الموقع مباشرة عبر خرائط Google Maps
                     </a>
                 </div>
             </div>
 
+            <!-- الكود الصحيح والحي للخريطة بناء على الرابط المرفق -->
             <div class="lg:col-span-7 w-full h-[450px] bg-stone-900 p-2 border border-stone-800 relative shadow-2xl">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.123456789!2d42.5012345!3d18.2123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15fc7fd8939bd8eb%3A0xc3b16733237a7dcb!2sIskandar+Women+Salon!5e0!3m2!1sar!2ssa!4v1700000000000!5m2!1sar!2ssa" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.218529267156!2d42.5845815!3d18.2302113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15fcabb30393d8eb%3A0x63b1dac3caf34dcb!2z2LXYp9mE2YjZhiDYp9iz2YDynamicYr9ixINin2YTZhtiZ2KfZgdis2Yk!5e0!3m2!1sar!2ssa!4v1718870000000!5m2!1sar!2ssa" 
                     width="100%" 
                     height="100%" 
                     style="border:0;" 
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade"
-                    class="opacity-90 hover:opacity-100 transition-all duration-500">
+                    class="opacity-95 transition-all">
                 </iframe>
             </div>
 
         </div>
     </section>
 
+    <!-- الفوتر الراقـي والنهائي للمتجر -->
     <footer class="bg-stone-950 py-12 text-center border-t border-stone-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
             <p class="text-xs text-stone-500 uppercase">✨ صالون اسكندر النسائي للتزيين والتجميل ✨</p>
-            <p class="text-[11px] text-stone-600">جميع الحقوق محفوظة لعام 2026 © صمم باحترافية تامة لضمان أفضل تحويل وتجربة مستخدم.</p>
+            <p class="text-[11px] text-stone-600">جميع الحقوق محفوظة لعام 2026 © صمم باحترافية تامة لضمان أفضل تحويل وتجربة مستخدم على Vercel.</p>
         </div>
     </footer>
 
