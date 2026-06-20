@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صالون اسكندر النسائي - أبها</title>
+    <title>صالون اسكندر النسائي | فخامة وأناقة تليق بكِ</title>
     <!-- استيراد خط Cairo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,12 +11,12 @@
     
     <style>
         :root {
-            --primary: #db2777;
-            --primary-hover: #be185d;
-            --secondary: #fbcfe8;
-            --dark: #1f2937;
-            --light: #f9fafb;
-            --gold: #d97706;
+            --primary: #be185d; /* الوردي الملكي الفخم */
+            --primary-light: #fce7f3;
+            --accent: #d97706; /* الذهبي للأزرار والتفاصيل */
+            --dark: #111827;
+            --text-gray: #4b5563;
+            --light-bg: #fffbfd;
         }
 
         * {
@@ -28,14 +28,16 @@
         }
 
         body {
-            background-color: var(--light);
+            background-color: var(--light-bg);
             color: var(--dark);
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
+        /* الهيدر */
         header {
-            background: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -44,23 +46,24 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 800;
             color: var(--primary);
             text-decoration: none;
+            letter-spacing: -0.5px;
         }
 
         nav a {
-            margin-right: 20px;
+            margin-right: 25px;
             text-decoration: none;
-            color: #4b5563;
+            color: var(--text-gray);
             font-weight: 600;
             transition: color 0.3s;
         }
@@ -70,198 +73,185 @@
         }
 
         .btn-book {
-            background-color: var(--primary);
+            background: linear-gradient(135deg, var(--primary) 0%, #9d174d 100%);
             color: white;
-            padding: 10px 24px;
+            padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            transition: background 0.3s, transform 0.2s;
-            box-shadow: 0 4px 6px rgba(219, 39, 119, 0.2);
+            transition: all 0.3s transform 0.2s;
+            box-shadow: 0 4px 15px rgba(190, 24, 93, 0.25);
         }
 
         .btn-book:hover {
-            background-color: var(--primary-hover);
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(190, 24, 93, 0.35);
         }
 
-        /* Hero Section */
+        /* الواجهة الرئيسية (Hero) */
         .hero {
-            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
-            padding: 90px 20px;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            position: relative;
         }
 
         .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 850px;
+            z-index: 2;
         }
 
         .hero-badge {
             background-color: white;
             color: var(--primary);
-            padding: 6px 16px;
+            padding: 6px 18px;
             border-radius: 50px;
             font-size: 14px;
             font-weight: 700;
             display: inline-block;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid #ffe4e6;
         }
 
         .hero h1 {
-            font-size: 42px;
+            font-size: 48px;
             font-weight: 800;
-            color: #111827;
-            margin-bottom: 20px;
+            color: var(--dark);
+            margin-bottom: 25px;
             line-height: 1.3;
         }
 
         .hero h1 span {
             color: var(--primary);
+            position: relative;
         }
 
         .hero p {
-            font-size: 18px;
-            color: #4b5563;
-            margin-bottom: 30px;
+            font-size: 19px;
+            color: var(--text-gray);
+            margin-bottom: 35px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        /* قسم العناوين المشترك */
-        .section-padding {
+        /* قسم الخدمات (Services) */
+        .services {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 80px 20px;
+            padding: 90px 20px;
             text-align: center;
         }
 
         .section-title {
-            font-size: 32px;
+            font-size: 36px;
             font-weight: 800;
             margin-bottom: 10px;
-            color: #111827;
+            color: var(--dark);
         }
 
         .section-subtitle {
             color: #6b7280;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
+            font-size: 16px;
         }
 
-        /* معرض الصور الاحترافي */
-        .gallery-grid {
+        .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
         }
 
-        .gallery-card {
+        .service-card {
             background: white;
-            border-radius: 20px;
+            border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            transition: transform 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            border: 1px solid #f3f4f6;
+            transition: all 0.3s ease;
+            text-align: right;
         }
 
-        .gallery-card:hover {
-            transform: translateY(-5px);
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(190, 24, 93, 0.06);
         }
 
-        .gallery-card img {
+        .service-img {
             width: 100%;
-            height: 250px;
+            height: 240px;
             object-fit: cover;
         }
 
-        .gallery-info {
-            padding: 20px;
-            text-align: right;
+        .service-body {
+            padding: 25px;
         }
 
-        .gallery-info h3 {
-            font-size: 18px;
-            color: #111827;
-            margin-bottom: 5px;
-        }
-
-        .gallery-info p {
-            font-size: 14px;
-            color: #6b7280;
-        }
-
-        /* قائمة الخدمات والأسعار */
-        .price-list {
-            background: white;
-            padding: 40px;
-            border-radius: 24px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: right;
-        }
-
-        .price-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-            border-bottom: 1px dashed #e5e7eb;
-        }
-
-        .price-item:last-child {
-            border-bottom: none;
-        }
-
-        .price-name {
+        .service-body h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: var(--dark);
             font-weight: 700;
-            color: #111827;
         }
 
-        .price-value {
-            color: var(--primary);
-            font-weight: 800;
-            font-size: 18px;
+        .service-body p {
+            color: var(--text-gray);
+            font-size: 15px;
+            line-height: 1.6;
         }
 
-        /* قسم التقييمات وآراء العميلات */
+        /* قسم الآراء (Reviews) */
+        .reviews-section {
+            background-color: #fff5f7;
+            padding: 90px 20px;
+            text-align: center;
+        }
+
         .reviews-grid {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
         .review-card {
             background: white;
-            padding: 30px;
+            padding: 35px;
             border-radius: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
-            border: 1px solid #f3f4f6;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.01);
             text-align: right;
+            border-right: 4px solid var(--primary);
         }
 
         .stars {
-            color: #f59e0b;
+            color: #fbbf24;
             margin-bottom: 15px;
             font-size: 18px;
         }
 
         .review-text {
-            color: #4b5563;
+            color: var(--text-gray);
             font-size: 15px;
-            margin-bottom: 15px;
             font-style: italic;
+            margin-bottom: 20px;
         }
 
         .client-name {
             font-weight: 700;
-            color: #111827;
-            font-size: 14px;
+            color: var(--dark);
+            font-size: 16px;
         }
 
-        /* قسم الاتصال والموقع */
+        /* قسم التواصل والموقع */
         .contact-section {
-            background-color: #111827;
+            background-color: #0f172a;
             color: white;
-            padding: 80px 20px;
+            padding: 90px 20px;
         }
 
         .contact-container {
@@ -283,194 +273,190 @@
         }
 
         .contact-info h2 {
-            font-size: 32px;
+            font-size: 36px;
             color: #fbcfe8;
             margin-bottom: 20px;
+            font-weight: 800;
         }
 
         .contact-info p {
             color: #9ca3af;
             margin-bottom: 40px;
+            font-size: 16px;
         }
 
         .info-item {
             display: flex;
             align-items: center;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
         .info-icon {
-            width: 45px;
-            height: 45px;
-            background-color: #1f2937;
+            width: 50px;
+            height: 50px;
+            background-color: #1e293b;
             color: #fbcfe8;
-            border-radius: 10px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-left: 15px;
+            margin-left: 20px;
+            font-size: 20px;
         }
 
         .info-text h4 {
             font-size: 18px;
+            color: white;
+            font-weight: 700;
         }
 
         .info-text p {
-            font-size: 14px;
+            margin-bottom: 0;
+            font-size: 15px;
             color: #9ca3af;
         }
 
         .map-box {
-            background-color: #1f2937;
-            border-radius: 20px;
+            border-radius: 24px;
             overflow: hidden;
-            min-height: 320px;
+            min-height: 350px;
             position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
 
+        /* الفوتر */
         footer {
-            background-color: #030712;
+            background-color: #020617;
             color: #6b7280;
             text-align: center;
-            padding: 25px;
-            font-size: 14px;
+            padding: 30px;
+            font-size: 15px;
+            border-top: 1px solid #1e293b;
         }
 
         @media (max-width: 768px) {
-            nav { display: none; }
-            .hero h1 { font-size: 32px; }
+            nav {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 34px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- الهيدر -->
+    <!-- الهيدر العلوي -->
     <header>
         <div class="nav-container">
             <a href="#" class="logo">صالون اسكندر</a>
             <nav>
                 <a href="#">الرئيسية</a>
-                <a href="#gallery">معرض أعمالنا</a>
-                <a href="#prices">الخدمات والأسعار</a>
+                <a href="#services">خدماتنا</a>
                 <a href="#reviews">آراء العميلات</a>
                 <a href="#contact">اتصلي بنا</a>
             </nav>
-            <a href="https://wa.me/966503735564" target="_blank" class="btn-book">احجزي الآن</a>
+            <a href="https://wa.me/966503735564" target="_blank" class="btn-book">احجزي موعدكِ</a>
         </div>
     </header>
 
-    <!-- الواجهة الرئيسية -->
+    <!-- واجهة الترحيب الرئيسية -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge">✨ الفخامة والخصوصية التي تستحقينها</div>
-            <h1>تألقي بجمال فريد <br><span>يعكس جاذبيتكِ الساحرة</span></h1>
-            <p>في صالون اسكندر للتزيين النسائي بأبها، نعتني بأدق تفاصيل إطلالتكِ لنضمن لكِ تجربة ملكية مريحة ومتكاملة.</p>
-            <a href="https://wa.me/966503735564" target="_blank" class="btn-book" style="padding: 15px 40px; font-size: 18px;">تواصل مباشر عبر الواتساب</a>
+            <div class="hero-badge">✨ خياركِ الأول للأناقة والجمال في أبها</div>
+            <h1>تألقي بإطلالة ساحرة <br><span>تُبرز جمالكِ الفريد</span></h1>
+            <p>مرحباً بكِ في صالون اسكندر النسائي المخصص للعناية الفائقة بالشعر، المكياج الاحترافي، والخدمات التجميلية المتكاملة على أيدي خبيرات شغوفات بجمالكِ.</p>
+            <a href="https://wa.me/966503735564" target="_blank" class="btn-book" style="padding: 16px 45px; font-size: 18px;">احجزي عبر الواتساب الآن</a>
         </div>
     </section>
 
-    <!-- معرض صور الخدمات الاحترافي -->
-    <section id="gallery" class="section-padding">
-        <h2 class="section-title">جولة داخل عالمنا</h2>
-        <p class="section-subtitle">شاهدي فخامة الأجواء وجاهزية الخدمات المصممة لراحتكِ</p>
+    <!-- قسم الخدمات المطور بالصور -->
+    <section id="services" class="services">
+        <h2 class="section-title">خدماتنا الفاخرة</h2>
+        <p class="section-subtitle">اعتني بنفسكِ مع باقة من أفضل الخدمات التجميلية المصممة بعناية</p>
         
-        <div class="gallery-grid">
-            <div class="gallery-card">
-                <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSTKhrv6wCWp105IZxVnwaE3qEKghWtWcrcQUfdnX336Iy9sp9MC1lkYein3m6OmALToZ-Mgx1uLd40vr0" alt="أجواء الصالون الفاخرة">
-                <div class="gallery-info">
-                    <h3>أجواء الصالون الفاخرة</h3>
-                    <p>ديكورات عصرية وراقية تضمن لكِ أعلى مستويات الراحة والاسترخاء التام.</p>
+        <div class="services-grid">
+            <!-- كارد 1 -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600&auto=format&fit=crop" alt="تسريحات شعر وعناية" class="service-img">
+                <div class="service-body">
+                    <h3>العناية الفائقة بالشعر</h3>
+                    <p>قصات عصرية، صبغات مواكبة للموضة، معالجات بروتين وفيلر احترافية، وتسريحات مبتكرة لكل مناسباتكِ السعيدة.</p>
                 </div>
             </div>
-            <div class="gallery-card">
-                <img src="https://encrypted-tbn9.gstatic.com/licensed-image?q=tbn:ANd9GcSDmP9sr7_i3TFe9R0A3n74UP5Sl0kmpfO1AYeUdPebUczzXmX8eDXpigmIwRuxeVMmSQGMklv96BOptyg" alt="جلسات العناية بالشعر">
-                <div class="gallery-info">
-                    <h3>معالجات وتصفيف الشعر</h3>
-                    <p>نستخدم أحدث أجهزة الترطيب والنانو لتقديم خدمات قص وتصفيف احترافية ومثالية.</p>
+            <!-- كارد 2 -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=600&auto=format&fit=crop" alt="مكياج وتجميل" class="service-img">
+                <div class="service-body">
+                    <h3>المكياج والتجميل</h3>
+                    <p>إطلالات مكياج سينمائي، ومكياج عرائس فخم، ومكياج ناعم يبرز جمال ملامحكِ الطبيعية بلمسات خبيراتنا الفنية.</p>
                 </div>
             </div>
-            <div class="gallery-card">
-                <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcR3xD8qw-MEDC8gA4mFDfaIwXzzO-zZd-TYxWD5ovlv1_QvabNVHZcHYJYJ6_ZKGgALp7cAlObFy5jOFQE" alt="قسم المكياج الاحترافي">
-                <div class="gallery-info">
-                    <h3>المكياج والتجميل السينمائي</h3>
-                    <p>لمسات ناعمة تبرز ملامحكِ الطبيعية بأيدي خبيرات تجميل متخصصات في المناسبات.</p>
+            <!-- كارد 3 -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=600&auto=format&fit=crop" alt="العناية بالبشرة" class="service-img">
+                <div class="service-body">
+                    <h3>علاجات ونضارة البشرة</h3>
+                    <p>جلسات تنظيف بشرة عميق، ماسكات تغذية مخصصة، وجلسات هيدرافيشيال متطورة لإعادة الحيوية والشباب لبشرتكِ.</p>
+                </div>
+            </div>
+            <!-- كارد 4 -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1604654894610-df4906b18563?q=80&w=600&auto=format&fit=crop" alt="أظافر ومانيكير" class="service-img">
+                <div class="service-body">
+                    <h3>الأظافر والباديكير</h3>
+                    <p>جلسات مانيكير وباديكير استرخائية، تركيب أظافر احترافي، ورسم بأحدث الألوان والتقنيات التي تمنح يديكِ رقياً دائماً.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- قائمة الخدمات والأسعار -->
-    <section id="prices" class="section-padding" style="background-color: #f3f4f6;">
-        <h2 class="section-title">قائمة خدماتنا وأسعارنا</h2>
-        <p class="section-subtitle">باقات متميزة بأسعار تنافسية تناسب تطلعاتكِ</p>
-        
-        <div class="price-list">
-            <div class="price-item">
-                <span class="price-name">قص وتصفيف شعر احترافي</span>
-                <span class="price-value">تبدأ من 100 رس</span>
-            </div>
-            <div class="price-item">
-                <span class="price-name">جلسة معالجة وترطيب عميق للشعر</span>
-                <span class="price-value">250 رس</span>
-            </div>
-            <div class="price-item">
-                <span class="price-name">مكياج سهرات / مناسبات فاخر</span>
-                <span class="price-value">350 رس</span>
-            </div>
-            <div class="price-item">
-                <span class="price-name">جلسة تنظيف بشرة ونضارة عميقة</span>
-                <span class="price-value">200  رس</span>
-            </div>
-            <div class="price-item">
-                <span class="price-name">خدمة مانيكير وباديكير متكاملة</span>
-                <span class="price-value">150 رس</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم مراجعات العميلات -->
-    <section id="reviews" class="section-padding">
-        <h2 class="section-title">ماذا تقول عمالنا؟</h2>
-        <p class="section-subtitle">ثقتكم ورضاكم هي سر استمرار تميزنا دائمًا</p>
+    <!-- قسم آراء العميلات (Reviews) -->
+    <section id="reviews" class="reviews-section">
+        <h2 class="section-title">ماذا تقول عسيراتنا؟</h2>
+        <p class="section-subtitle">ثقة عميلاتنا هي سر نجاحنا وتميزنا المستمر</p>
         
         <div class="reviews-grid">
             <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <p class="review-text">"المكان يفتح النفس ونظيف جداً، شغل معالجة الشعر عندهم خيالي وسريع والتعامل راقي فوق الوصف."</p>
-                <div class="client-name">- نورة القحطاني</div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"بصراحة أفضل صالون جربته في أبها لتسريحات الشعر والصبغة. دقة في المواعيد والتعامل راقي جداً وشغلهم يفتح النفس!"</p>
+                <div class="client-name">سارة القحطاني</div>
             </div>
             <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <p class="review-text">"سويت مكياج عندهم في مناسبة وطلع ناعم وفخم وثابت طول السهرة. صراحة أفضل صالون تجميل بأبها."</p>
-                <div class="client-name">- سارة عسيري</div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"المكياج عندهم خيالي وناعم وثابت طول السهرة. تنظيف البشرة أيضاً ممتاز جداً والمكان مريح ونظيف وفيه خصوصية تامة."</p>
+                <div class="client-name">أمل عسيري</div>
             </div>
             <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <p class="review-text">"أهنيكم على الالتزام بالمواعيد والاستقبال المريح، الباديكير وتنظيف البشرة عندهم 10 على 10."</p>
-                <div class="client-name">- أميرة الشهري</div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"شغل الباديكير والمانيكير رائع ونظيف والخدمة سريعة وممتازة. أنصح كل من تبحث عن شغل احترافي بزيارتهم."</p>
+                <div class="client-name">نورة الشهري</div>
             </div>
         </div>
     </section>
 
-    <!-- قسم التواصل والموقع -->
+    <!-- قسم التواصل والموقع الجغرافي -->
     <section id="contact" class="contact-section">
         <div class="contact-container">
             <div class="contact-info">
-                <h2>يسعدنا استقبالكِ دائمًا</h2>
-                <p>تفضلي بزيارتنا أو اتصلي بنا لتنسيق موعدكِ وضمان الحصول على أفضل خدمة واسترخاء.</p>
+                <h2>تفضلي بزيارتنا اليوم</h2>
+                <p>مستعدون دائماً لاستقبالكِ وتقديم تجربة دلال تليق بكِ. يمكنكِ الاتصال مباشرة أو زيارة موقعنا.</p>
                 
                 <div class="info-item">
                     <div class="info-icon">📍</div>
                     <div class="info-text">
-                        <h4>العنوان والموقع</h4>
-                        <p>طريق الإمام البخاري، أبها، المملكة العربية السعودية</p>
+                        <h4>الموقع الجغرافي</h4>
+                        <p>البخاري، أبها 62583، المملكة العربية السعودية</p>
                     </div>
                 </div>
 
                 <div class="info-item">
                     <div class="info-icon">📞</div>
                     <div class="info-text">
-                        <h4>رقم التواصل والحجز</h4>
+                        <h4>رقم الحجز السريع</h4>
                         <p dir="ltr">+966 50 373 5564</p>
                     </div>
                 </div>
@@ -478,16 +464,16 @@
                 <div class="info-item">
                     <div class="info-icon">🕒</div>
                     <div class="info-text">
-                        <h4>أوقات العمل</h4>
-                        <p>نعمل على مدار الساعة لخدمتكم وتلبية طلباتكم المتميزة.</p>
+                        <h4>ساعات العمل</h4>
+                        <p>نعمل على مدار الساعة لخدمتكم وتلبية كافة حجوزاتكم.</p>
                     </div>
                 </div>
             </div>
 
+            <!-- خريطة تفاعلية من قوقل مابس لموقع الصالون الفعلي -->
             <div class="map-box">
-                <!-- خريطة حية دقيقة لموقع الصالون بأبها -->
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.2721869852267!2d42.5850!3d18.2302!2m3!1f0!2f0!3f0!3m2!1i1020!2i768!4f13.1!3m3!1m2!1s0x15fcabb30393d8eb%3A0x63b1dac3caf34dcb!2z2LXYp9mE2YjZhiDYp9iz2YDynamicYr9ixINin2YTZhtiZ2KfZgdis2Yog2KfZhNio2K7Yp9ix2Yo!5e0!3m2!1sar!2ssa!4v1710000000000!5m2!1sar!2ssa" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.2721869852267!2d42.5871601!3d18.2302113!2m3!1f0!2f0!3f0!3m2!1i1020!2i768!4f13.1!3m3!1m2!1s0x15fcabb30393d8eb%3A0x63b1dac3caf34dcb!2z2LXYp9mE2YjZhiDYp9iz2YDynamicYr9ixINin2YTZhtiZ2KfZgdis2Yog!5e0!3m2!1sar!2ssa!4v1710000000000!5m2!1sar!2ssa" 
                     width="100%" 
                     height="100%" 
                     style="border:0; position: absolute; top:0; left:0;" 
